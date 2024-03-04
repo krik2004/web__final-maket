@@ -1,5 +1,5 @@
 import Swiper from 'swiper/bundle'
-// import { Navigation, Pagination } from 'swiper/modules'
+// import { Navigation, Pagination } from 'swiper/modules'jjj
 
 let elementsToShow = 0
 
