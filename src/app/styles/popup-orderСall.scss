@@ -7,13 +7,17 @@
   background: rgba(255, 255, 255, 0.925);
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 100;
   display: none;
+
   &__body {
     font-family: 'TT Lakes';
   }
   &__content {
-    z-index: 3;
+    @media (max-width: 520px) {
+      padding: 104px 16px;
+    }
+    z-index: 100;
     opacity: 1 !important;
     position: absolute;
     border-left: $turquoise solid 2px;
@@ -32,10 +36,6 @@
     flex-wrap: nowrap;
     align-items: flex-start;
     gap: 16px;
-
-    @media (max-width: 520px) {
-      padding: 104px 16px;
-    }
   }
   &__field {
     border: 1px solid rgb(234, 234, 234);

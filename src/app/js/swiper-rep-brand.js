@@ -49,8 +49,11 @@ function countVisibleElements() {
     elementsToShow = 100
   } else {
     if (window.innerWidth > 768 && window.innerWidth <= 1439) {
+      console.log('удалил между 768 и 1439')
       btn.classList.remove('hidden')
       visibleElements = 5
+      swiper.el.classList.add('-non-slider')
+      swiper.disable()
       if (btn.textContent === 'Показать все') {
         cards.forEach((item, index) => {
           item.classList.remove('swiper-rep-brand__swiper-slide--hidden')
@@ -62,7 +65,10 @@ function countVisibleElements() {
     } else {
       if (window.innerWidth > 1440) {
         btn.classList.remove('hidden')
+        console.log('удалил после 1440')
         visibleElements = 7
+        swiper.el.classList.add('-non-slider')
+        swiper.disable()
         if (btn.textContent === 'Показать все') {
           cards.forEach((item, index) => {
             item.classList.remove('swiper-rep-brand__swiper-slide--hidden')
