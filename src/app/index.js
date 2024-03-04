@@ -1,7 +1,0 @@
-import './js/popup-burger.js'
-import './js/modal-orderСall.js'
-import './js/modal-feedback.js'
-import './js/swiper-rep-tech.js'
-import './js/swiper-rep-brand.js'
-import './js/swiper-prices.js'
-import './js/expand-btn.js'
