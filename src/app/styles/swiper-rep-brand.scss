@@ -1,0 +1,170 @@
+.swiper-rep-brand {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 50px;
+  min-width: 0;
+  font-family: TT Lakes;
+  &__text-container {
+    height: 56px;
+    padding: 16px 32px;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(248, 248, 248), rgb(255, 255, 255) 98.614%);
+    border-top: #d9fff5 2px solid;
+  }
+  &__title {
+    margin: 0;
+    font-size: 16px;
+    color: #7e7e82;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  &__expand-btn {
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: auto !important;
+    height: 24px;
+    background-color: $almostWhite;
+    border: 0;
+    padding: 0;
+    //FONT
+    color: $almostBlack;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    &:hover {
+      opacity: 0.5;
+    }
+    &::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url('/./src/shared/img/btn/ic_expand.svg') no-repeat;
+    }
+  }
+  &__expand-btn--open {
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+  &__swiper-slide--hidden {
+    display: none !important;
+  }
+  &__swiper-slide {
+    min-width: 260px !important;
+    height: 72px !important;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 767px) {
+      border: 1px solid $slideBorder;
+      background: rgb(255, 255, 255);
+      border-radius: 6px;
+      padding: 16px;
+      //font
+      font-family: 'TT Lakes';
+      color: $almostBlack;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-image: url('/./src/shared/img/btn/ic_go.svg');
+        background-repeat: no-repeat;
+        right: 16px;
+        bottom: 16px;
+      }
+    }
+    @media (min-width: 768px) {
+      display: relative !important;
+      width: 100% !important;
+      border: 1px solid $slideBorder;
+      background: rgb(255, 255, 255);
+      border-radius: 6px;
+      padding: 16px;
+      color: $almostBlack;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+    }
+    //ic_go
+    &::after {
+      content: '';
+      //   position: absolute;
+      width: 40px;
+      height: 40px;
+      background-image: url('/./src/shared/img/btn/ic_go.svg');
+      background-repeat: no-repeat;
+      //   right: 16px;
+      //   bottom: 16px;
+    }
+  }
+  &__swiper {
+    padding: 0 16px !important;
+    @media (min-width: $breakpoint-md) {
+      padding: 0 24px !important;
+    }
+    @media (min-width: $breakpoint-xl) {
+      padding: 0 32px !important;
+    }
+    &.-non-slider {
+      margin: 0;
+      width: 100% !important;
+      .swiper-rep-brand__swiper-wrapper {
+        display: grid;
+        gap: 10px;
+        height: auto;
+        grid-template-columns: repeat(2, 1fr);
+        @media (min-width: $breakpoint-md) {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+        @media (min-width: $breakpoint-xl) {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 32px;
+        }
+        .swiper-rep-brand__swiper-slide {
+          display: relative !important;
+          width: 100% !important;
+          height: 72px !important;
+          display: flex;
+          align-items: center;
+          border: 1px solid $slideBorder;
+          background: rgb(255, 255, 255);
+          border-radius: 6px;
+          margin-right: 0 !important;
+          padding: 16px;
+          //font
+          color: $almostBlack;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+          letter-spacing: -0.2px;
+          //ic_go
+          &::after {
+            content: '';
+            // position: absolute;
+            width: 40px;
+            height: 40px;
+            background-image: url('/./src/shared/img/btn/ic_go.svg');
+            background-repeat: no-repeat;
+            // right: 16px;
+            // bottom: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+.hidden {
+  display: none !important;
+}

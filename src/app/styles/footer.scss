@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+  padding: 16px 0 0 24px;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 21px;
+
+  color: $grey;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  border-top: 1px solid $turquoise;
+  @media (min-width: $breakpoint-md) {
+    height: 61px;
+    padding: 33px 0 0 24px;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1 0 auto;
+    gap: 15px;
+  }
+  @media (min-width: $breakpoint-xl) {
+    padding: 33px 0 0 32px;
+    margin-top: 32px;
+  }
+}

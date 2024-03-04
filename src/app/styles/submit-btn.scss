@@ -1,0 +1,22 @@
+.submit-btn {
+  margin-left: auto;
+  background-color: $pink;
+  border: 0;
+  color: #fff;
+  border-radius: 16px;
+  height: 32px;
+  //   min-width: 136px;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-family: TT Lakes;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.15px;
+  text-align: right;
+  text-transform: uppercase;
+  gap: 5px;
+}

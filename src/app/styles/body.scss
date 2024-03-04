@@ -1,0 +1,88 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+button,
+input[type='submit'] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+body,
+html,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.link {
+  text-decoration: none;
+}
+html {
+  scroll-behaviour: smooth;
+}
+
+body {
+  font-family: TT Lakes;
+  min-height: 100%;
+  background: rgb(248, 248, 248);
+  // display: grid;
+  // grid-template-rows: 1fr auto;
+}
+.link {
+  text-decoration: none;
+}
+
+.content-wrap {
+  border-color: aqua !important ;
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.body-flex {
+  display: flex;
+  min-width: 100%;
+  max-width: 100%;
+  // height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+}
