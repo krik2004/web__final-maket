@@ -17,7 +17,7 @@
   min-width: 0;
   font-family: TT Lakes;
   &__text-container {
-    height: 56px;
+    // height: 56px;
     padding: 16px 32px;
     width: 100%;
     background: linear-gradient(90deg, rgb(248, 248, 248), rgb(255, 255, 255) 98.614%);
@@ -66,9 +66,9 @@
     display: none !important;
   }
   &__swiper-slide {
-    min-width: 260px !important;
+    min-width: 160px !important;
     @media (max-width: 767px) {
-      height: 160px !important;
+      height: 200px !important;
       border: 1px solid $slideBorder;
       background: rgb(255, 255, 255);
       border-radius: 6px;
@@ -137,7 +137,7 @@
           grid-template-columns: repeat(3, 1fr);
           gap: 24px;
         }
-        @media (min-width: $breakpoint-xl) {
+        @media (min-width: 1440px) {
           grid-template-columns: repeat(4, 1fr);
           gap: 32px;
         }

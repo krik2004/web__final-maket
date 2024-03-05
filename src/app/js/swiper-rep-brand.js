@@ -1,5 +1,5 @@
 import Swiper from 'swiper/bundle'
-// import { Navigation, Pagination } from 'swiper/modules'jjj
+// import { Navigation, Pagination } from 'swiper/modules'
 
 let elementsToShow = 0
 
@@ -12,13 +12,13 @@ let swiper = new Swiper('.swiper-rep-brand__swiper', {
   slidesPerView: 1.3,
   on: {
     resize: function enableOnlyMobile(swiper) {
-      if (window.innerWidth <= 767) {
+      if (window.innerWidth < 768) {
         btn.classList.add('hidden')
         elementsToShow = 100
         swiper.enable()
         swiper.el.classList.remove('-non-slider')
       } else {
-        if (window.innerWidth > 768) {
+        if (window.innerWidth >= 768) {
           btn.classList.remove('hidden')
           swiper.disable()
           swiper.el.classList.add('-non-slider')
@@ -42,18 +42,17 @@ const cards = Array.from(document.querySelectorAll('.swiper-rep-brand__swiper-sl
 let visibleElements
 
 function countVisibleElements() {
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth < 768) {
     cards.forEach(item => item.classList.remove('swiper-rep-brand__swiper-slide--hidden'))
     btn.classList.add('hidden')
     visibleElements = 100
     elementsToShow = 100
   } else {
-    if (window.innerWidth > 768 && window.innerWidth <= 1439) {
-      console.log('удалил между 768 и 1439')
+    if (window.innerWidth >= 768 && window.innerWidth < 1440) {
       btn.classList.remove('hidden')
       visibleElements = 5
-      swiper.el.classList.add('-non-slider')
       swiper.disable()
+      swiper.el.classList.add('-non-slider')
       if (btn.textContent === 'Показать все') {
         cards.forEach((item, index) => {
           item.classList.remove('swiper-rep-brand__swiper-slide--hidden')
@@ -63,7 +62,7 @@ function countVisibleElements() {
         })
       }
     } else {
-      if (window.innerWidth > 1440) {
+      if (window.innerWidth >= 1440) {
         btn.classList.remove('hidden')
         console.log('удалил после 1440')
         visibleElements = 7
@@ -82,11 +81,11 @@ function countVisibleElements() {
   }
   return visibleElements
 }
-// countVisibleElements()
+
 window.addEventListener('resize', countVisibleElements)
 window.addEventListener('load', countVisibleElements)
 
-// let areElementsShown = false
+let areElementsShown = false
 
 function showCards() {
   btn.textContent = 'Скрыть все'

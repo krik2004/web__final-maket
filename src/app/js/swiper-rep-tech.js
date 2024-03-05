@@ -12,13 +12,13 @@ let swiper = new Swiper('.swiper-rep-tech__swiper', {
   slidesPerView: 1.3,
   on: {
     resize: function enableOnlyMobile(swiper) {
-      if (window.innerWidth <= 767) {
+      if (window.innerWidth < 768) {
         btn.classList.add('hidden')
         elementsToShow = 100
         swiper.enable()
         swiper.el.classList.remove('-non-slider')
       } else {
-        if (window.innerWidth > 768) {
+        if (window.innerWidth >= 768) {
           btn.classList.remove('hidden')
           swiper.disable()
           swiper.el.classList.add('-non-slider')
@@ -42,15 +42,17 @@ const cards = Array.from(document.querySelectorAll('.swiper-rep-tech__swiper-sli
 let visibleElements
 
 function countVisibleElements() {
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth < 768) {
     cards.forEach(item => item.classList.remove('swiper-rep-tech__swiper-slide--hidden'))
     btn.classList.add('hidden')
     visibleElements = 100
     elementsToShow = 100
   } else {
-    if (window.innerWidth > 768 && window.innerWidth <= 1439) {
+    if (window.innerWidth >= 768 && window.innerWidth < 1440) {
       btn.classList.remove('hidden')
       visibleElements = 2
+      swiper.disable()
+      swiper.el.classList.add('-non-slider')
       if (btn.textContent === 'Показать все') {
         cards.forEach((item, index) => {
           item.classList.remove('swiper-rep-tech__swiper-slide--hidden')
@@ -60,7 +62,7 @@ function countVisibleElements() {
         })
       }
     } else {
-      if (window.innerWidth > 1440) {
+      if (window.innerWidth >= 1440) {
         btn.classList.remove('hidden')
         visibleElements = 3
         if (btn.textContent === 'Показать все') {

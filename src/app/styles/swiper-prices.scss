@@ -6,7 +6,7 @@
   margin-top: 50px;
   min-width: 0;
   &__text-container {
-    height: 56px;
+    // height: 56px;
     padding: 16px 32px;
     width: 100%;
     background: linear-gradient(90deg, rgb(248, 248, 248), rgb(255, 255, 255) 98.614%);
@@ -45,7 +45,7 @@
       align-items: center;
       line-height: 1;
     }
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: 767px) {
       .submit-btn {
         position: absolute;
         bottom: 16px;
@@ -54,7 +54,7 @@
     }
   }
   &__heading-container {
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       display: none;
     }
     padding-top: 31px;
@@ -76,7 +76,7 @@
   }
   &__information {
     width: 421px;
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: 767px) {
       padding: 0 0 0 16px;
       margin-top: 16px;
     }
@@ -128,16 +128,16 @@
     height: 200px !important;
     border-radius: 6px;
     background: rgb(255, 255, 255);
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: 767px) {
       border: 1px solid $slideBorder;
     }
   }
   &__swiper {
     padding: 0 16px !important;
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: 767px) {
       margin-top: 16px !important;
     }
-    @media (min-width: $breakpoint-md) {
+    @media (min-width: 768px) {
       padding: 0 24px !important;
       margin-top: 16px !important;
     }
@@ -151,7 +151,7 @@
         display: grid;
         height: auto;
         .swiper-prices__swiper-slide {
-          @media (min-width: $breakpoint-md) {
+          @media (min-width: 768px) {
             display: relative !important;
             width: 100% !important;
             height: auto !important;
@@ -183,7 +183,7 @@
   &__service-title {
     margin-bottom: 4px;
     color: $grey;
-    @media (min-width: $breakpoint-md) {
+    @media (min-width: 768px) {
       display: none;
     }
   }
@@ -192,7 +192,7 @@
     display: block;
     height: 52px;
     width: 100%;
-       @media (min-width: $breakpoint-md) {
+    @media (min-width: 768px) {
       display: none;
     }
   }

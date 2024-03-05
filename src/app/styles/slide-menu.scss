@@ -17,18 +17,18 @@
     width: 100%;
     position: relative;
     width: auto;
-
-}
-&__list::-webkit-scrollbar {
+    align-items: center;
+  }
+  &__list::-webkit-scrollbar {
     display: none;
   }
   &__item {
-    padding: 0;
+    padding: 8px 10px;
+    // border: solid;
+    text-wrap: nowrap;
   }
   &__item-btn {
     padding: 0;
-    width: 246px;
-    height: 40px;
   }
   &__item-act {
     border-radius: 6px;

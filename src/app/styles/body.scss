@@ -70,11 +70,16 @@ body {
   text-decoration: none;
 }
 
+.main-wrap {
+  // width: 80%;
+}
 .content-wrap {
   border-color: aqua !important ;
   display: block;
   position: relative;
   width: 100%;
+  max-width: 1120px;
+  // margin: auto;
 }
 .body-flex {
   display: flex;
@@ -84,5 +89,5 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: start;
+  justify-content: center;
 }
