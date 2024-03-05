@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Webpack template",
   "main": "index.js",
+  "homepage": "https://krik2004.github.io/web__final-maket",
   "scripts": {
     "start": "webpack serve --config webpack/webpack.dev.js",
     "build": "npm run clean & NODE_ENV=production webpack --config webpack/webpack.prod.js",
@@ -13,7 +14,8 @@
     "lint:fix": "npm run lint -- --fix",
     "test": "jest",
     "tscheck": "tsc",
-    "tscheck:watch": "tsc -w"
+    "tscheck:watch": "tsc -w",
+    "deploy": "gh-pages -d dist"
   },
   "browserslist": {
     "production": [
@@ -51,6 +53,7 @@
     "css-loader": "^6.8.1",
     "css-minimizer-webpack-plugin": "^5.0.1",
     "file-loader": "^6.2.0",
+    "gh-pages": "6.1.1",
     "html-webpack-plugin": "^5.5.3",
     "json-minimizer-webpack-plugin": "^4.0.0",
     "mini-css-extract-plugin": "^2.7.6",
