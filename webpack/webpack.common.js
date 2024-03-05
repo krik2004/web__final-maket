@@ -190,10 +190,10 @@ module.exports = {
 
         // others:
         // `shared/fonts` to `dist/static/fonts`
-        // {
-        //   from: `${defines.src}/shared/fonts`,
-        //   to: `${defines.dist}/${defines.static}/fonts`
-        // },
+        {
+          from: `${defines.src}/shared/fonts`,
+          to: `${defines.dist}/${defines.static}/fonts`
+        },
 
         // misc
         // `shared/misc` to `dist/`
